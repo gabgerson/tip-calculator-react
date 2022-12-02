@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { getTipAmount } from "../utils/calculator.utils";
+import { getTipAmount } from "../../utils/calculator.utils";
+import "./styles.scss"
 
 const defaultFormFields ={
     bill: '',
@@ -38,11 +39,15 @@ const CalculatorForm = () => {
       <div className="calculator-form-container">
         <h1>TIP CALCULATOR</h1>
         <form onSubmit={handleSubmit}>
-
-          Bill <input name="bill" type="number" value={bill} onChange={handleChange} />
-  
-          Tip<input name="tip_percent" type="number" value={tip_percent} onChange={handleChange} />
-           Num of People <input name="split" type="number" value={split} onChange={handleChange} />
+          <label htmlFor="bill">Bill</label>
+          <input className="form-input" name="bill" type="number" value={bill} onChange={handleChange} />
+          
+          <label htmlFor="tip_percent">Tip%</label>
+          <input className="form-input" name="tip_percent" type="number" value={tip_percent} onChange={handleChange} />
+         
+          <label htmlFor="split">Number of People</label>
+          <input className="form-input" name="split" type="number" value={split} onChange={handleChange} />
+          
           <button type='submit'>Submit</button>
         </form>
         Tip/ per <span>{split}</span> person(s)

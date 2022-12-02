@@ -1,14 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import CalculatorForm from './components/calculator-form.component';
+import CalculatorForm from './components/calculator-component/calculator-form.component';
 function App() {
   return (
-    <div className="App">
-  
+    <div className="App">  
       <CalculatorForm></CalculatorForm>
-
-
-
     </div>
   );
 }
