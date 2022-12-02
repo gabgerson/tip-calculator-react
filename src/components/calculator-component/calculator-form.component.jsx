@@ -5,8 +5,8 @@ import "./styles.scss"
 const defaultFormFields ={
     bill: '',
     tip_percent:'',
-    tip_total:'',
-    bill_total:'',
+    tip_total:'0',
+    bill_total:'0',
     split:'1'
 
 }
@@ -45,16 +45,18 @@ const CalculatorForm = () => {
           <label htmlFor="tip_percent">Tip%</label>
           <input className="form-input" name="tip_percent" type="number" value={tip_percent} onChange={handleChange} />
          
-          <label htmlFor="split">Number of People</label>
+          <label htmlFor="split"># People</label>
           <input className="form-input" name="split" type="number" value={split} onChange={handleChange} />
           
-          <button type='submit'>Submit</button>
+          <button type='submit'>Calculate</button>
         </form>
-        Tip/ per <span>{split}</span> person(s)
-        <div name="total">{tip_total}</div>
+
+        <label htmlFor="tip-total"> Tip (per person)</label>
+        <div className="result" name="tip-total">${tip_total}</div>
         
-        Bill Total/ per <span>{split}</span> person(s)
-        <div name="total">{bill_total}</div>
+        {/* <span>{split}</span> person(s) */}
+        <label htmlFor="bill-total">Total (per person) </label>
+        <div className="result" name="bill-total">${bill_total}</div>
 
       </div>
 

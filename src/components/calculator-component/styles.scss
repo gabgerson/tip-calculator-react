@@ -5,14 +5,40 @@
    display: flex;
    flex-direction: column;
    margin: 20% 20%;
-
+   background: linear-gradient(
+    rgb(199, 213, 249) 0%,
+    rgb(130, 130, 130) 100%
+  );
+  font-family: 'Kanit', sans-serif;
+  color: rgb(19, 15, 15);
 }
 
 .form-input{
-   color:aquamarine;
    display: flex;
    flex-direction: column;
    // justify-content: center;
    margin: 0 auto;
-  
+   width: 3em;
+   text-align: center;
+}
+   
+button {
+   background-color: rgb(19, 15, 15);
+   border: 0px;
+   color:rgb(199, 213, 249);
+   border-radius: 5%;
+   text-transform: uppercase;
+   font-family: 'Kanit', sans-serif;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   font-size: 1em;
+
+}
+
+.result {
+   font-size: 2em;
+}
+
+label {
+   font-size: 1.5em;
 }

@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import CalculatorForm from './components/calculator-component/calculator-form.component';
 function App() {
   return (
